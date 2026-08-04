@@ -5,8 +5,6 @@ AIM
 To create a Private Blockchain and to add nodes, create accounts, transfer Ether into it by creating
 and deploying Smart contract.
 PROCEDURE
-
-```
 1.Go to https //geth.ethereum.org/ and download the software for windows. While installing select
 both geth and development tools.
 2.To check whether the geth is installed ,run “geth” command in your command prompt.
@@ -70,36 +68,37 @@ authrpc.port 8546 --networkid { NETWORK_ID } --unlock { ADDRESS_NODE2 } --passwo
 5
 PROGRAM
 #Genesis file privateblock.json
+```
 {
-"config" {
-"chainId" 878787,
-"homesteadBlock" 0,
-"eip150Block" 0,
-"eip155Block" 0,
-"eip158Block" 0,
-"byzantiumBlock" 0,
-"constantinopleBlock" 0,
-"petersburgBlock" 0,
-"istanbulBlock" 0,
-"berlinBlock" 0,
-"clique" {
-"period" 5,
-"epoch" 30000
+    "config":{
+        "chainId":8515,
+        "homesteadBlock": 0,
+        "eip150Block": 0,
+        "eip155Block": 0,
+        "eip158Block": 0,
+        "byzantiumBlock": 0,
+        "constantinopleBlock": 0,
+        "petersburgBlock": 0,
+        "istanbulBlock": 0,
+        "berlinBlock": 0,
+        "clique": {
+          "period": 5,
+          "epoch": 30000
+        }
+    } ,
+        "difficulty": "1",
+        "gasLimit": "8000000",
+        "extradata": "0x000000000000000000000000000000000000000000000000000000000000000003755DDF775cD4fbe6Ef347ce22a6Ed5fbe1014F0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "alloc": {
+            "03755DDF775cD4fbe6Ef347ce22a6Ed5fbe1014F": { "balance": "3000000000000000000" },
+            "1cBbc951bA624b48FC6aC1A2ee8B93BbCb69F9D8": { "balance": "3000000000000000000" }
+        }
+ 
 }
-},
-"difficulty" "1",
-"gasLimit" "8000000",
-"extradata"
-"0x00000000000000000000000000000000000000000000000000000000000000001d09cd3F475a65
-7381b223A9c91029865b27E0270000000000000000000000000000000000000000000000000000000
-000000000000000000000000000000000000000000000000000000000000000000000000000",
-"alloc" {
-"1d09cd3F475a657381b223A9c91029865b27E027" { "balance" "3000000000000000000" },
-"e503980FB9E4D17048b973B0ee01759DcF2d7879" { "balance" "3000000000000000000" }
-}
-}
+```
 6
 #Smart Contract New.sol
+```
 //SPDX-License-Identifier MIT
 pragma solidity ^0.8.19;
 contract New{
@@ -114,9 +113,10 @@ return name;
 ```
 OUTPUT
 # Deploying Transaction in Remix
-7
+<img width="1920" height="1080" alt="Screenshot 2026-08-03 081757" src="https://github.com/user-attachments/assets/66893ebf-6b04-4c8c-880d-a34b6fc61f10" />
+
 # Contract Creation Output in Command Prompt
-<img width="1180" height="492" alt="image" src="https://github.com/user-attachments/assets/fc0eaa31-1340-4c3e-8410-3ca49a1f4dcd" />
+<img width="1920" height="1080" alt="Screenshot 2026-08-03 081740" src="https://github.com/user-attachments/assets/d00f7fb8-a9ab-4392-9e02-575c056348dd" />
 
 RESULT: Thus, the Private Blockchain is created, nodes are added with accounts, and Ether is transferred
 into it by creating and deploying Smart contract successfully
